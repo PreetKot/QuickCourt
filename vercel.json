@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "src/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "src/dist" }
+    }
+  ],
+  "routes": [
+    { "src": "^/(.*)$", "dest": "/src/dist/$1" },
+    { "src": "^/$", "dest": "/src/dist/index.html" }
+  ]
+}
+{
+	"ignoreCommand": "echo 'Ignore server folder for frontend build'"
