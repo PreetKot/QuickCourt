@@ -15,7 +15,13 @@ export async function apiRequest<T>(
 ): Promise<T> {
   const token = localStorage.getItem('accessToken');
   
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+  const fullUrl = `${API_BASE_URL}${endpoint}`;
+  // Debug: log the request URL
+  if (endpoint.startsWith('/auth/login')) {
+    // eslint-disable-next-line no-console
+    console.log('[API] Login request URL:', fullUrl);
+  }
+  const response = await fetch(fullUrl, {
     headers: {
       'Content-Type': 'application/json',
       ...(token && { Authorization: `Bearer ${token}` }),
@@ -56,8 +62,19 @@ export async function apiRequest<T>(
       }
     }
     
-    const error = await response.json().catch(() => ({ message: 'Network error' }));
-    throw new ApiError(response.status, error.message || 'Request failed');
+    let errorMsg = 'Request failed';
+    try {
+      const error = await response.json();
+      errorMsg = error.message || errorMsg;
+    } catch (e) {
+      errorMsg = 'Network error';
+    }
+    // Debug: log error details
+    if (endpoint.startsWith('/auth/login')) {
+      // eslint-disable-next-line no-console
+      console.error('[API] Login error:', response.status, errorMsg);
+    }
+    throw new ApiError(response.status, errorMsg);
   }
 
   return response.json();
