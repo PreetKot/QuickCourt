@@ -14,6 +14,3 @@ export function sha256(input: string) {
   return crypto.createHash('sha256').update(input).digest('hex');
 }
 
-export function generateOtp(): string {
-  return (Math.floor(100000 + Math.random() * 900000)).toString();
-}

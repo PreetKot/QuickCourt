@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { login, logout, registerUser, rotateRefreshToken, verifyOtp } from './auth.service.js';
+import { login, logout, registerUser, rotateRefreshToken } from './auth.service.js';
 import { UserRole } from '../../types/enums.js';
 
 const signupSchema = z.object({
@@ -22,22 +22,12 @@ export async function signupHandler(req: Request, res: Response) {
     }
     const { inviteSecret, ...rest } = data;
     const out = await registerUser(rest as any); // cast due to zod unknown -> any
-    res.status(201).json({ message: 'User created. Verify OTP sent to email.', ...out });
+  res.status(201).json({ message: 'User created.', ...out });
   } catch (e: any) {
     res.status(400).json({ message: e.message });
   }
 }
 
-export async function verifyOtpHandler(req: Request, res: Response) {
-  const schema = z.object({ userId: z.string(), otp: z.string().length(6) });
-  try {
-    const { userId, otp } = schema.parse(req.body);
-    await verifyOtp(userId, otp);
-    res.json({ message: 'Verification successful' });
-  } catch (e: any) {
-    res.status(400).json({ message: e.message });
-  }
-}
 
 export async function loginHandler(req: Request, res: Response) {
   const schema = z.object({ email: z.string().email(), password: z.string() });

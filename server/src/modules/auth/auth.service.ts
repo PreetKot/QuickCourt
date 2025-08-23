@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { UserRole } from '../../types/enums.js';
-import { generateOtp, hashPassword, sha256, verifyPassword } from '../../utils/hash.js';
+import { hashPassword, sha256, verifyPassword } from '../../utils/hash.js';
 import { signAccessToken, signRefreshToken, verifyRefreshToken } from '../../utils/jwt.js';
 import { env } from '../../config/env.js';
 
@@ -11,22 +11,10 @@ export async function registerUser(params: { email: string; password: string; fu
   if (existing) throw new Error('Email already registered');
   const passwordHash = await hashPassword(params.password);
   const user = await prisma.user.create({ data: { email: params.email, passwordHash, fullName: params.fullName, role: params.role, avatarUrl: params.avatarUrl } });
-  const otp = generateOtp();
-  const otpHash = sha256(otp);
-  const expiresAt = new Date(Date.now() + env.otpTtlMinutes * 60 * 1000);
-  await prisma.verificationToken.create({ data: { userId: user.id, otpHash, expiresAt } });
-  console.log(`[OTP] for ${user.email}: ${otp}`);
+  // OTP logic removed
   return { userId: user.id };
 }
 
-export async function verifyOtp(userId: string, otp: string) {
-  const token = await prisma.verificationToken.findFirst({ where: { userId, usedAt: null }, orderBy: { createdAt: 'desc' } });
-  if (!token) throw new Error('No verification token');
-  if (token.expiresAt < new Date()) throw new Error('OTP expired');
-  if (token.otpHash !== sha256(otp)) throw new Error('Invalid OTP');
-  await prisma.verificationToken.update({ where: { id: token.id }, data: { usedAt: new Date() } });
-  return { success: true };
-}
 
 export async function login(email: string, password: string) {
   const user = await prisma.user.findUnique({ where: { email } });
