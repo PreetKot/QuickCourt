@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { useAuth } from '../contexts/AuthContext';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
+import { Input } from '../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import { 
   Activity, 
   PlusCircle, 
@@ -29,13 +29,13 @@ import {
   MoreHorizontal,
   IndianRupee
 } from 'lucide-react';
-import SEO from '@/components/SEO';
-import BrandNav from '@/components/BrandNav';
-import AddCourtForm from '@/components/AddCourtForm';
-import { courtsApi, bookingsApi } from '@/lib/api';
+import SEO from '../components/SEO';
+import BrandNav from '../components/BrandNav';
+import AddCourtForm from '../components/AddCourtForm';
+import { courtsApi, bookingsApi } from '../lib/api';
 import { toast } from 'sonner';
 import { io as ioClient, Socket } from 'socket.io-client';
-import { API_BASE_URL } from '@/lib/api';
+import { API_BASE_URL } from '../lib/api';
 
 const OwnerDashboard: React.FC = () => {
   const { user, isLoading } = useAuth();

@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 import { Camera, Save, Calendar, Clock, MapPin, X, Eye, EyeOff, Star, MessageSquare } from 'lucide-react';
-import { useAuth } from '@/contexts/AuthContext';
-import BrandNav from '@/components/BrandNav';
-import SEO from '@/components/SEO';
-import { useToast } from '@/hooks/use-toast';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
+import { Badge } from '../components/ui/badge';
+import { Separator } from '../components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '../components/ui/alert-dialog';
+import { useAuth } from '../contexts/AuthContext';
+import BrandNav from '../components/BrandNav';
+import SEO from '../components/SEO';
+import { useToast } from '../hooks/use-toast';
 import { useQuery } from '@tanstack/react-query';
-import { bookingsApi, Booking, loyaltyApi, badgeApi, BadgeEarned } from '@/lib/api';
+import { bookingsApi, Booking, loyaltyApi, badgeApi, BadgeEarned } from '../lib/api';
 import { useQueryClient } from '@tanstack/react-query';
 
 const Profile = () => {

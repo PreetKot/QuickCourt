@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "./ui/select";
 import { Calendar } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../hooks/use-toast";
 
 const Hero = () => {
   const { toast } = useToast();

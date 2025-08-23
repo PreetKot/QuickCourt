@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/dialog';
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { Separator } from './ui/separator';
+import { Card, CardContent } from './ui/card';
 import { Clock, MapPin, Calendar, CreditCard, Shield, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { useRazorpayPayment, PaymentOptions } from '@/hooks/useRazorpayPayment';
-import { useToast } from '@/hooks/use-toast';
+import { useRazorpayPayment, PaymentOptions } from '../hooks/useRazorpayPayment';
+import { useToast } from '../hooks/use-toast';
 
 interface PaymentModalProps {
   isOpen: boolean;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { toast } from '@/hooks/use-toast';
 import { Mail, ArrowLeft, Send, CheckCircle, RotateCcw } from 'lucide-react';
-import { api } from '@/lib/api';
-import SEO from '@/components/SEO';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { toast } from '../hooks/use-toast';
+import { api } from '../lib/api';
+import SEO from '../components/SEO';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');

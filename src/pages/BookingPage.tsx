@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import BrandNav from '@/components/BrandNav';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import SEO from '../components/SEO';
+import BrandNav from '../components/BrandNav';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
 import { Calendar, Clock, MapPin, CheckCircle, AlertTriangle } from 'lucide-react';
-import { bookingsApi, courtsApi } from '@/lib/api';
-import { useToast } from '@/hooks/use-toast';
+import { bookingsApi, courtsApi } from '../lib/api';
+import { useToast } from '../hooks/use-toast';
 
 const BookingPage = () => {
   const { venueId, courtId } = useParams();

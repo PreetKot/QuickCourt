@@ -1,18 +1,18 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import SEO from "@/components/SEO";
-import BrandNav from "@/components/BrandNav";
-import VenueCard, { Venue } from "@/components/VenueCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
+import SEO from "../components/SEO";
+import BrandNav from "../components/BrandNav";
+import VenueCard, { Venue } from "../components/VenueCard";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Separator } from "../components/ui/separator";
+import { Checkbox } from "../components/ui/checkbox";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { Slider } from "../components/ui/slider";
 import { 
   Search, 
   MapPin, 
@@ -22,7 +22,7 @@ import {
   Map,
   List
 } from 'lucide-react';
-import { facilitiesApi } from '@/lib/api';
+import { facilitiesApi } from '../lib/api';
 
 const sports = ['badminton', 'tennis', 'football', 'cricket', 'basketball', 'table tennis', 'squash', 'swimming', 'volleyball', 'pickleball'];
 

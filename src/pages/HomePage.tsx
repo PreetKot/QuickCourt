@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MapPin, Calendar, ChevronDown, Star, ArrowRight, Users, Clock, Trophy, Play, CheckCircle, Shield, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
-import { facilitiesApi } from '@/lib/api';
-import BrandNav from '@/components/BrandNav';
-import VenueCard from '@/components/VenueCard';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import SEO from '@/components/SEO';
+import { useAuth } from '../contexts/AuthContext';
+import { facilitiesApi } from '../lib/api';
+import BrandNav from '../components/BrandNav';
+import VenueCard from '../components/VenueCard';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Card, CardContent } from '../components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
+import SEO from '../components/SEO';
 
 interface Venue {
   id: string;

@@ -1,13 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Eye, EyeOff, ArrowLeft, User, Mail, Lock, Camera, Shield } from 'lucide-react';
-import { useAuth } from '@/contexts/AuthContext';
-import SEO from '@/components/SEO';
-import OtpVerification from '@/components/OtpVerification';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { useAuth } from '../contexts/AuthContext';
+import SEO from '../components/SEO';
+import OtpVerification from '../components/OtpVerification';
 
 // Dedicated Admin Signup page (role fixed to ADMIN)
 const AdminSignup = () => {

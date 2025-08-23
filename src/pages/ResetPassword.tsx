@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, Shield, CheckCircle, Key } from 'lucide-react';
-import { api } from '@/lib/api';
-import SEO from '@/components/SEO';
-import PasswordInput from '@/components/PasswordInput';
+import { Button } from '../components/ui/button';
+import { toast } from '../hooks/use-toast';
+import { api } from '../lib/api';
+import SEO from '../components/SEO';
+import PasswordInput from '../components/PasswordInput';
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState('');

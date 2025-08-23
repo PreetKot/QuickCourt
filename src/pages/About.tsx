@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ImageCarousel from '@/components/ImageCarousel';
-import SEO from '@/components/SEO';
+import ImageCarousel from '../components/ImageCarousel';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { CheckCircle2, Users, Shield, Trophy, Sparkles } from 'lucide-react';
 
 const heroImages = [

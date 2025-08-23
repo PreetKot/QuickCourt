@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Checkbox } from '@/components/ui/checkbox';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
-import { useAuth } from '@/contexts/AuthContext';
-import SEO from '@/components/SEO';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { Checkbox } from '../components/ui/checkbox';
+import { useAuth } from '../contexts/AuthContext';
+import SEO from '../components/SEO';
 
 const Login = () => {
   const [email, setEmail] = useState('');

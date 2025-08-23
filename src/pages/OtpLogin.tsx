@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { toast } from '@/hooks/use-toast';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { toast } from '../hooks/use-toast';
 import { ArrowLeft, Mail, Send } from 'lucide-react';
-import { api } from '@/lib/api';
-import SEO from '@/components/SEO';
-import OtpVerification from '@/components/OtpVerification';
+import { api } from '../lib/api';
+import SEO from '../components/SEO';
+import OtpVerification from '../components/OtpVerification';
 
 const OtpLogin = () => {
   const [email, setEmail] = useState('');

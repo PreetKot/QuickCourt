@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent } from './ui/dialog';
+import { Button } from './ui/button';
+import { Card, CardContent } from './ui/card';
 import { CheckCircle, Calendar, Clock, MapPin, Download, Share2, ArrowRight, FileDown } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '../hooks/use-toast';
 
 interface BookingSuccessProps {
   isOpen: boolean;

@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { Search, MapPin, Calendar, Filter, SlidersHorizontal, Grid3X3, List, ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/skeleton';
-import BrandNav from '@/components/BrandNav';
-import VenueCard from '@/components/VenueCard';
-import FilterSidebar from '@/components/FilterSidebar';
-import SEO from '@/components/SEO';
-import { facilitiesApi } from '@/lib/api';
-import { useToast } from '@/hooks/use-toast';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Badge } from '../components/ui/badge';
+import { Skeleton } from '../components/ui/skeleton';
+import BrandNav from '../components/BrandNav';
+import VenueCard from '../components/VenueCard';
+import FilterSidebar from '../components/FilterSidebar';
+import SEO from '../components/SEO';
+import { facilitiesApi } from '../lib/api';
+import { useToast } from '../hooks/use-toast';
 
 interface Venue {
   id: string;

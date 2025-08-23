@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { X, Star, DollarSign, MapPin, Home, Car, Lightbulb, Droplets, Utensils, Shield } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Separator } from '@/components/ui/separator';
-import { Badge } from '@/components/ui/badge';
+import { Button } from './ui/button';
+import { Slider } from './ui/slider';
+import { Checkbox } from './ui/checkbox';
+import { Separator } from './ui/separator';
+import { Badge } from './ui/badge';
 
 interface VenueFilters {
   sportType: string;

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, authApi } from '@/lib/api';
-import { useToast } from '@/hooks/use-toast';
+import { User, authApi } from '../lib/api';
+import { useToast } from '../hooks/use-toast';
 
 interface AuthContextType {
   user: User | null;
